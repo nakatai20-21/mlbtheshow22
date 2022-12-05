@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="discription" content="MLBTheShowのデータ入力">
+    <title>データ一覧</title>
+    <link href="{% static 'result.css' %}" rel="stylesheet"/>
+</head>
+<body>
+    <header>打席ごとのデータ入力</header>
+        <form action="" method="POST">
+            {% for field in form %}
+            <p>
+            {% if  "first_runner" in field.label_tag %}
+                <div class="first_runner">{{ field }}</div>
+            {% elif "second_runner" in field.label_tag %}
+                <div class="second_runner">{{ field }}</div>
+            {% elif "third_runner" in field.label_tag %}
+                <div class="third_runner">{{ field }}</div>   
+                <p class="base">runner</p>
+            {% else %}
+                {{ field.label_tag }}
+                {{field}}
+            {% endif %}
+            <br>
+            </p>
+            {% endfor %}
+            {% csrf_token %}
+            <input type="submit" name="input" value="決定">
+        </form>
+    <ul>
+        <li><a href="{% url 'showapp:index' %}">トップページへ</a></li>
+        <li><a href="{% url 'showapp:data' %}">データ一覧へ</a></li>
+    </ul>
+</body>
+</html>

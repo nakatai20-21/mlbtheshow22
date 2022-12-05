@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="discription" content="MLBTheShowのデータ集計・分析">
+    <title>MLBTheShowのデータ集計・分析</title>
+    <link href="{% static 'design.css' %}" rel="stylesheet"/>
+</head>
+<body>
+    <header class="introduction">
+        <h1>MLBTheShowのデータ集計・分析</h1>
+    </header>
+    <ul>
+        <li><a href="{% url 'showapp:form'%}">データ入力</a></li>
+        <li><a href="{% url 'showapp:data' %}">データ一覧</a></li>
+    </ul>
+    <!-- <a href="{% url 'showapp:form' %}">Player</a> -->
+</body>
+</html>

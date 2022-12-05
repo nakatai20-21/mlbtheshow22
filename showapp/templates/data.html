@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="discription" content="MLBTheShowのデータ一覧">
+	<title>データ一覧</title>
+	<link href="{% static 'data.css' %}" rel="stylesheet"/>
+</head>
+<body>
+	<header>
+		<nav class="pc-nsv">
+			<div class="navi_wrap">
+				<ul class="navi_lists">
+					<li class="navi_list">
+						<a href="#">Ball Type</a>
+						<ul class="dropdown_lists">
+							<li class="dropdown_list"><a href="#straight">Straight</a></li>
+							<li class="dropdown_list"><a href="#slider">Slider</a></li>
+							<li class="dropdown_list"><a href="#cut">Cut</a></li>
+							<li class="dropdown_list"><a href="#curve">Curve</a></li>
+							<li class="dropdown_list"><a href="#sinker">Sinker</a></li>
+							<li class="dropdown_list"><a href="#splitter">Splitter</a></li>
+						</ul>
+					</li>
+					<li class="navi_list">
+						<a href="#">At Bat</a>
+						<ul class="dropdown_lists">
+							<li class="dropdown_list"><a href="#firstatbat">First at Bat</a></li>
+							<li class="dropdown_list"><a href="#secondatbat">Second at Bat</a></li>
+							<li class="dropdown_list"><a href="#thirdatbat">Third at Bat</a></li>
+							<li class="dropdown_list"><a href="#fourthatbat">Fourth at Bat</a></li>
+							<li class="dropdown_list"><a href="#afterfifthatbat">After Fifth at Bat</a></li>
+						</ul>
+					</li>
+					<li class="navi_list">
+						<a href="#">Runner</a>
+						<ul class="dropdown_lists">
+							<li class="dropdown_list"><a href="#norunner">No Runner</a></li>
+							<li class="dropdown_list"><a href="#firstrunner">first Runner</a></li>
+							<li class="dropdown_list"><a href="#secondrunner">Second Runner</a></li>
+							<li class="dropdown_list"><a href="#thirdrunner">Third Runner</a></li>
+							<li class="dropdown_list"><a href="#firstandsecondrunner">First and Second Runner</a></li>
+							<li class="dropdown_list"><a href="#firstandthirdrunner">First and Third Runner</a></li>
+							<li class="dropdown_list"><a href="#secondandthirdrunner">Second and Third Runner</a></li>
+							<li class="dropdown_list"><a href="#fullbaserunner">Full Base Runner</a></li>
+						</ul>
+					</li>
+					<li class="nav"><a href="{% url 'showapp:index' %}">トップページ</a></li>
+					<li class="nav"><a href="{% url 'showapp:form' %}">データ入力</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div class="empty"></div>
+<h1></h1>
+	<img src="data:image/png;base64, {{chart1}}">
+	<img src="data:image/png;base64, {{chart24}}">
+	<img src="data:image/png;base64, {{chart2}}">
+	<img src="data:image/png;base64, {{chart3}}">
+	<a id="straight"><img src="data:image/png;base64, {{chart4}}"></a>
+	<a id="slider"><img src="data:image/png;base64, {{chart5}}"></a>
+	<a id="cut"><img src="data:image/png;base64, {{chart6}}"></a>
+	<a id="curve"><img src="data:image/png;base64, {{chart7}}"></a>
+	<a id="sinker"><img src="data:image/png;base64, {{chart8}}"></a>
+	<a id="splitter"><img src="data:image/png;base64, {{chart9}}"></a>
+	<a id="slider"><img src="data:image/png;base64, {{chart10}}"></a>
+	<a id="firstatbat"><img src="data:image/png;base64, {{chart11}}"></a>
+	<a id="secondatbat"><img src="data:image/png;base64, {{chart12}}"></a>
+	<a id="thirdatbat"><img src="data:image/png;base64, {{chart13}}"></a>
+	<a id="fourthatbat"><img src="data:image/png;base64, {{chart14}}"></a>
+	<a id="afterfifthatbat"><img src="data:image/png;base64, {{chart15}}"></a>
+	<a id="norunner"><img src="data:image/png;base64, {{chart16}}"></a>
+	<a id="firstrunner"><img src="data:image/png;base64, {{chart17}}"></a>
+	<a id="secondrunner"><img src="data:image/png;base64, {{chart18}}"></a>
+	<a id="thirdrunner"><img src="data:image/png;base64, {{chart19}}"></a>
+	<a id="firstandsecondrunner"><img src="data:image/png;base64, {{chart20}}"></a>
+	<a id="firstandthirdrunner"><img src="data:image/png;base64, {{chart21}}"></a>
+	<a id="secondandthirdrunner"><img src="data:image/png;base64, {{chart22}}"></a>
+	<a id="fullbaserunner"><img src="data:image/png;base64, {{chart23}}"></a>
+	{{ avg_today }}
+</body>
+</html>
