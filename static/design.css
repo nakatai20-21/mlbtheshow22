@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+:root {
+    --fontcolor:hsl(200, 0%, 80%);
+}
+html {
+    font-size: 100%;
+    font-family: 'Sawarabi Mincho', serif;
+}
+body {
+    background-image: url(images/ball.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+header {
+    font-size: 2.5vw;
+}
+h1 {
+    color: hsl(200, 0%, 80%);
+    opacity: 0.9;
+    border-bottom:2px solid;
+    border-bottom-color: rgba(190, 186, 186, 0.5);
+}
+li {
+    list-style: none;
+}
+a{
+    color: var(--fontcolor);
+    opacity: 0.8;
+    font-size: 3.7vw;
+    text-decoration: none;
+}
