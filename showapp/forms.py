@@ -11,7 +11,7 @@ from .models import Information, Member
 from .input_param import mph, plate_appearance, hand, ball_type, result
 
 
-#forms.Formだといけない　forms.ModelFormだといける
+#forms.Formだと通らない　forms.ModelFormだと通る
 #前者の場合はモデルを使わず、後者の場合はモデルを使う
 class InputForm(forms.ModelForm):
 

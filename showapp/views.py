@@ -20,11 +20,14 @@ from datetime import date
 class IndexView(TemplateView):
     template_name = 'index.html'
 
+#Formクラスを継承したクラスの作成
 class InputView(FormView):
     template_name = "results.html"
     form_class = InputForm
+    #サクセスURLとしてapp_name:shownameのname:formを指定
     success_url = reverse_lazy("showapp:form")
 
+    #入力データの保存(入力が適正の時に実行されるメソッド)
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
